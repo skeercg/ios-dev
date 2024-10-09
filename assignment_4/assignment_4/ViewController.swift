@@ -21,8 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var Dice1: UIImageView!
     
     @IBAction func roll(_ sender: Any) {
-        let randomDice1 = Int.random(in: 0..<6)
-        let randomDice2 = Int.random(in: 0..<6)
+        let values = Set(0..<6)
+        let randomDice1 = values.randomElement()!
+        let randomDice2 = values.subtracting(Set([randomDice1])).randomElement()!
 
         self.Dice1.image = UIImage(named:self.dices[randomDice1])
         self.Dice2.image = UIImage(named:self.dices[randomDice2])
