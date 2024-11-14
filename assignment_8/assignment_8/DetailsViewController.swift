@@ -21,7 +21,7 @@ class DetailsViewController: UIViewController {
         self.skinImage = skinImage
         self.skinName = skinName
         self.skinDetails = skinDetails
-        super.init(nibName: nil, bundle: nil)  // Call the designated initializer
+        super.init(nibName: nil, bundle: nil)  
     }
     
     required init?(coder: NSCoder) {
